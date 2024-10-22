@@ -36,6 +36,7 @@ fn write_request(stream: &mut TcpStream) {
 fn get_string_from_input() -> String {
   let mut result = String::new();
   std::io::stdin().read_line(&mut result).unwrap();
+  result.push('@');
   result
 }
 
